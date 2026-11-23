@@ -20,7 +20,7 @@ function syncLanguageLink(){
 }
 syncLanguageLink();
 window.addEventListener('hashchange',syncLanguageLink);
-const layers = $$('[data-layer]');
+const layers = $$('button[data-layer]');
 layers.forEach(button=>button.addEventListener('click',()=>{
   layers.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   $('.layer-desc').textContent = button.dataset.info;
